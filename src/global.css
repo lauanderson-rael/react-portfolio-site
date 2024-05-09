@@ -1,0 +1,46 @@
+/* global css */
+* {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.btn-contato button {
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #00ff08;
+  border: 0;
+  border-radius: 30px;
+  transition: all.2s;
+}
+
+.flex {
+  display: flex;
+}
+
+button:hover {
+  box-shadow: 0px 0px 8px #00ff08;
+  transform: scale(1.05);
+}
+
+.titulo {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2 span {
+  color: #00ff08;
+}
