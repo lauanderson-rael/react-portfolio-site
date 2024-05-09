@@ -46,7 +46,7 @@ export function Main() {
       <section className="especialidades">
         <div className="interface">
           <h2 className="titulo">
-            MINHAS <span>ESPECIALIDADES.</span>
+            MINHAS <span>ESPECIALIDADES</span>
           </h2>
           <div className="flex">
             <Item
@@ -129,7 +129,7 @@ export function Main() {
           <div className="flex">
             <Projeto nome="Projeto 1" />
             <Projeto nome="Projeto 2" />
-            <Projeto nome="Projeto 3" />
+            <Projeto nome="Projeto 4" />
           </div>
         </div>
       </section>
