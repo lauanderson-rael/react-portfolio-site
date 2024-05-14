@@ -33,4 +33,11 @@ export const Container = styled.header`
       padding: 0 40px; // cima baixo | esq dir
     }
   }
+
+  @media (max-width: 1010px) {
+    .menu-desktop,
+    .btn-contato {
+      display: none;
+    }
+  }
 `;

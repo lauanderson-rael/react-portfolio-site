@@ -4,7 +4,7 @@ import Imagem from "../../assets/imagem.jpg";
 export const Container = styled.main`
   // TELA 1
   section.topo-do-site {
-    padding: 40px 4%;
+    padding: 100px 4%;
 
     .txt-topo-site h1 {
       color: #fff;
@@ -37,6 +37,20 @@ export const Container = styled.main`
 
       filter: drop-shadow(0 0 0.8rem #00ff08);
       box-shadow: 1px 1px 0.5rem #00ff08;
+    }
+    //responsivo
+    @media (max-width: 1020px) {
+      padding: 20px 8%;
+      .txt-topo-site h1 {
+        font-size: 32px;
+      }
+      .flex {
+        flex-direction: column-reverse;
+        gap: 40px;
+      }
+      .img-topo-site img {
+        width: 100%;
+      }
     }
   }
 
@@ -82,6 +96,11 @@ export const Container = styled.main`
     .especialidades-box:hover {
       transform: scale(1.05);
       box-shadow: 0 0 20px #ffffff78;
+    }
+
+    // responsivo
+    @media (max-width: 1020px) {
+      padding: 80px 8%;
     }
   }
 
@@ -130,11 +149,31 @@ export const Container = styled.main`
         transition: all.2s;
       }
     }
+    // responsivo - sobre
+    @media (max-width: 1020px) {
+      padding: 30px 8%;
+      .flex {
+        flex-direction: column-reverse;
+      }
+      .txt-sobre h2 {
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+      }
+      .btn-social {
+        text-align: center;
+      }
+      .img-sobre img {
+        width: 100%;
+      }
+    }
   }
   // SESSAO PORTIFOLIO - TELA 4
   .portfolio {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1d;
+    margin-top: 80px;
+
+    box-shadow: 0 0 40px 10px #ffffff1d; //barra de sombra
 
     .flex {
       justify-content: space-around;
@@ -179,5 +218,113 @@ export const Container = styled.main`
 
   .overlay:hover {
     opacity: 1;
+  }
+
+  // responsivo - portfolio
+  @media (max-width: 1020px) {
+    .img-port {
+      width: 100%;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+    .portfolio .flex {
+      gap: 60px;
+    }
+  }
+`;
+
+// SESSÃO FORMULARIO - TELA 5
+export const SessaoFormulario = styled.section`
+  padding: 80px 4%;
+  margin-top: 40px;
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+
+    input,
+    textarea {
+      width: 100%;
+      background-color: #242424;
+      border: 0;
+      outline: none;
+      padding: 20px 15px; // cima baixo - laterais
+      border-radius: 15px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    textarea {
+      resize: none;
+      max-height: 180px;
+    }
+  }
+  form input::placeholder {
+    // color: xxxxxx;
+  }
+
+  .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+
+    input[type="submit"] {
+      width: 120px;
+      color: #000;
+      font-weight: 700;
+      background-color: #00fe08;
+      cursor: pointer;
+      transition: all.2s;
+    }
+
+    input:hover {
+      box-shadow: 0px 0px 8px #00ff08;
+      transform: scale(1.05);
+    }
+  }
+`;
+
+//FOOTER - TELA 6
+export const Footer = styled.footer`
+  padding: 40px 4%;
+  box-shadow: 0 0 40px 10px #ffffff1d;
+
+  img {
+    width: 99px;
+    height: 74px;
+  }
+
+  .flex {
+    justify-content: space-between;
+  }
+
+  .line-footer {
+    padding: 20px 0;
+  }
+
+  .borda {
+    border-top: 2px solid #00ff08;
+  }
+
+  .line-footer p i {
+    color: #00ff08;
+    font-size: 22px;
+  }
+
+  .line-footer p a {
+    color: #fff;
+  }
+
+  @media (max-width: 1020px) {
+    .flex {
+      gap: 30px;
+    }
+    .line-footer {
+      text-align: center;
+    }
   }
 `;
