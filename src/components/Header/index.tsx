@@ -1,7 +1,27 @@
 import { Container } from "./styles";
 import Logo from "../../assets/logo2.png";
+import { IoMdClose } from "react-icons/io";
+import { BsList } from "react-icons/bs";
+import "../Main/index";
+
+import { useRef } from "react";
 
 export function Header() {
+  // Iniciando const com o tipo HTMLDivElement | null
+  const referencia1 = useRef<HTMLDivElement | null>(null);
+  const AbrirMenu = () => {
+    if (referencia1.current) {
+      referencia1.current.classList.add("abrir-menu");
+    }
+  };
+
+  const referencia2 = useRef<HTMLDivElement | null>(null);
+  const FecharMenu = () => {
+    if (referencia1.current) {
+      referencia1.current.classList.remove("abrir-menu");
+    }
+  };
+
   return (
     <Container>
       <div className="interface">
@@ -17,7 +37,7 @@ export function Header() {
               <a href="#">Início</a>
             </li>
             <li>
-              <a href="#">Especialidades</a>
+              <a href=".especialidades">Especialidades</a>
             </li>
             <li>
               <a href="#">Sobre</a>
@@ -32,6 +52,43 @@ export function Header() {
           <a href="#">
             <button>Contato</button>
           </a>
+        </div>
+
+        <div className="barra-lateral">
+          <div className="btn-abrir-menu" onClick={AbrirMenu} ref={referencia2}>
+            <i>
+              <BsList />
+            </i>
+          </div>
+
+          <div className="menu-mobile" ref={referencia1} onClick={FecharMenu}>
+            <div className="btn-fechar">
+              <i>
+                <IoMdClose />
+              </i>
+            </div>
+
+            <nav>
+              <ul>
+                <li>
+                  <a href="#">Início</a>
+                </li>
+                <li>
+                  <a href="#">Especialidades</a>
+                </li>
+                <li>
+                  <a href="#">Sobre</a>
+                </li>
+                <li>
+                  <a href="#">Projetos</a>
+                </li>
+                <li>
+                  <a href="#">Contato</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className="overlay-menu" onClick={FecharMenu}></div>
         </div>
       </div>
     </Container>

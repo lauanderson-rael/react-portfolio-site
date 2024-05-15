@@ -51,6 +51,10 @@ export const Container = styled.main`
       .img-topo-site img {
         width: 100%;
       }
+      .btn-contato {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 
