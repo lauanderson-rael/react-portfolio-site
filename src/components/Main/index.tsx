@@ -10,6 +10,8 @@ import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
+import { FaCloudDownloadAlt } from "react-icons/fa";
+
 
 import { Item } from "./item";
 import { Projeto } from "./projeto";
@@ -34,16 +36,16 @@ export function Main() {
                 <div style={{ display: "flex", gap: "30px" }}>
                   <div className="btn-contato linkedin">
                     <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="_blank">
-                      <button>Linkedin</button>
+                      <button> <FaLinkedin style={{width: "30px"}}/> Linkedin</button>
                     </a>
                   </div>
 
-                  <div className="btn-contato curriculo">
+                  <div className="btn-contato github">
                     <a
-                      href="https://drive.google.com/file/d/1-QXgMBqasKJxM4YEAd7G7C7AWlut7ojf/view?usp=sharing"
+                      href="https://github.com/lauanderson-rael"
                       target="blank"
                       download={"curriculo.pdf"}>
-                    <button>Abrir CV</button>
+                    <button><FaGithub style={{width: "30px"}}/> GitHub</button>
                     </a>
                   </div>
                 </div>
@@ -65,7 +67,7 @@ export function Main() {
 
               <div className="txt-sobre">
                 <h2>
-                  Muito prazer, <span>Sou Lauanderson Rael</span>
+                  Sobre <b style={{color: "#00ff08"}}>mim</b>
                 </h2>
                 <p>
                   Apaixonado por desafios e tecnologia, sou um desenvolvedor web
@@ -82,6 +84,16 @@ export function Main() {
                   simples, aplicativos da web e até mesmo contribuições para
                   projetos de código aberto.
                 </p>
+
+                <div className="btn-contato curriculo">
+                  <a
+                    href="https://drive.google.com/file/d/1-QXgMBqasKJxM4YEAd7G7C7AWlut7ojf/view?usp=sharing"
+                    target="blank"
+                    download={"curriculo.pdf"}>
+                  <button> <FaCloudDownloadAlt style={{width: "30px"}}/> Currículo</button>
+                  </a>
+                </div>
+
                 <div className="btn-social">
                   <a href="#">
                     <button>

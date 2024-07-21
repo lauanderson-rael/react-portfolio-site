@@ -47,7 +47,7 @@ export const Container = styled.main`
       padding: 10px 8%;
 
       .btn-contato button{
-        font-size: none;
+        font-size: small;
       }
       .txt-topo-site strong {
         font-size: 32px;
