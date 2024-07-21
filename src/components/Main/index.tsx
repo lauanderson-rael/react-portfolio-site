@@ -22,20 +22,27 @@ export function Main() {
           <div className="interface">
             <div className="flex">
               <div className="txt-topo-site">
-                <h1>
-                  TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span>
-                </h1>
-                <p>
-                  Olá, me chamo Lauanderson. Tenho 20 anos e atualmente estou
-                  cursando o 2° período de Análise e desenvolvimento de Sistemas
-                  pelo IFMA, e estudando React. Já possuo conhecimentos em
-                  front-end e sei utilizar HTML5, CSS3 e Javascript, além de
-                  resolver problemas rotineiros utilizando a linguagem Python
-                </p>
-                <div className="btn-contato">
-                  <a href="#">
-                    <button>Entre em contato</button>
-                  </a>
+
+                 <div className="informacoes">
+                    <p>Olá, eu sou</p>
+
+                    <strong>Lauanderson Rael</strong>
+
+                    <p>Desenvolvedor Front-end</p>
+                </div>
+
+                <div style={{ display: "flex", gap: "30px" }}>
+                  <div className="btn-contato">
+                    <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="_blank">
+                      <button>Linkedin</button>
+                    </a>
+                  </div>
+
+                  <div className="btn-contato">
+                    <a href="https://github.com/lauanderson-rael" target="blank" >
+                      <button>Github</button>
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -46,32 +53,7 @@ export function Main() {
           </div>
         </section>
 
-        <section className="especialidades">
-          <div className="interface">
-            <h2 className="titulo">
-              MINHAS <span>ESPECIALIDADES</span>
-            </h2>
-            <div className="flex">
-              <Item
-                icone={<FaLaptopCode />}
-                nome="Website"
-                paragrafo="Um website é uma coleção de páginas da web interconectadas, acessíveis através da internet. Websites são usados para diversos propósitos, como fornecer informações sobre uma empresa, produto ou serviço, compartilhar conteúdo pessoal ou profissional, vender produtos online, entre outros. Eles são uma ferramenta fundamental para comunicação, comércio e interação na era digital."
-              />
-              <Item
-                icone={<IoCart />}
-                nome="Loja online"
-                paragrafo="A loja virtual é o site onde uma pessoa pode comprar produtos pela internet. Já uma loja online, que também é chamada de e-commerce, tem a ver com começar um negócio para vender produtos a partir da internet. Ou seja, uma loja física também pode ter uma loja virtual para vender os produtos da marca."
-              />
-              <Item
-                icone={<FaWordpress />}
-                nome="Blog"
-                paragrafo="Um blog é um tipo de site onde as pessoas compartilham regularmente conteúdo novo sobre uma variedade de tópicos. Pode incluir desde notícias e opiniões pessoais até tutoriais, receitas, viagens e muito mais. É uma plataforma para comunicação, expressão criativa e compartilhamento de informações na internet."
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="sobre">
+        <section className="sobre" id="sobre">
           <div className="interface">
             <div className="flex">
               <div className="img-sobre">
@@ -80,7 +62,7 @@ export function Main() {
 
               <div className="txt-sobre">
                 <h2>
-                  MUITO PRAZER, <span>SOU LAUANDERSON RAEL</span>
+                  Muito prazer, <span>Sou Lauanderson Rael</span>
                 </h2>
                 <p>
                   Apaixonado por desafios e tecnologia, sou um desenvolvedor web
@@ -124,10 +106,37 @@ export function Main() {
           </div>
         </section>
 
-        <section className="portfolio">
+        <section className="especialidades" id="especialidades">
           <div className="interface">
             <h2 className="titulo">
-              MEU <span>PORTFÓLIO.</span>
+              Minhas <span>habilidades</span>
+            </h2>
+            <div className="flex">
+              <Item
+                icone={<FaLaptopCode />}
+                nome="Website"
+                paragrafo="Um website é uma coleção de páginas da web interconectadas, acessíveis através da internet. Websites são usados para diversos propósitos, como fornecer informações sobre uma empresa, produto ou serviço, compartilhar conteúdo pessoal ou profissional, vender produtos online, entre outros. Eles são uma ferramenta fundamental para comunicação, comércio e interação na era digital."
+              />
+              <Item
+                icone={<IoCart />}
+                nome="Loja online"
+                paragrafo="A loja virtual é o site onde uma pessoa pode comprar produtos pela internet. Já uma loja online, que também é chamada de e-commerce, tem a ver com começar um negócio para vender produtos a partir da internet. Ou seja, uma loja física também pode ter uma loja virtual para vender os produtos da marca."
+              />
+              <Item
+                icone={<FaWordpress />}
+                nome="Blog"
+                paragrafo="Um blog é um tipo de site onde as pessoas compartilham regularmente conteúdo novo sobre uma variedade de tópicos. Pode incluir desde notícias e opiniões pessoais até tutoriais, receitas, viagens e muito mais. É uma plataforma para comunicação, expressão criativa e compartilhamento de informações na internet."
+              />
+            </div>
+          </div>
+        </section>
+
+
+
+        <section className="portfolio" id="projetos">
+          <div className="interface">
+            <h2 className="titulo">
+              Meus <span>Projetos.</span>
             </h2>
             <div className="flex">
               <Projeto nome="Projeto 1" />
@@ -137,6 +146,7 @@ export function Main() {
           </div>
         </section>
 
+        <span id="formulario"></span>
         <SessaoFormulario>
           <div>
             <h2 className="titulo">

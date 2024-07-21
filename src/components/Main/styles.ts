@@ -6,25 +6,28 @@ export const Container = styled.main`
   section.topo-do-site {
     padding: 100px 4%;
 
-    .txt-topo-site h1 {
-      color: #fff;
-      font-size: 42px;
-      line-height: 40px;
-      span {
-        color: #00ff08;
-      }
-    }
-
     .flex {
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
-      gap: 90px;
     }
 
+    .txt-topo-site strong {
+      font-size: 55px;
+      color: #00ff08;
+    }
+
+    .informacoes{
+      background-color: none;
+      padding: 0;
+      margin-bottom: 50px;
+    }
     .txt-topo-site p {
       color: #fff;
-      margin: 40px 0;
+      font-size: large;
+      margin: 10px 0;
+      padding: 0;
     }
+
 
     .img-topo-site img {
       width: 300px;
@@ -40,9 +43,17 @@ export const Container = styled.main`
     }
     //responsivo
     @media (max-width: 1020px) {
-      padding: 20px 8%;
-      .txt-topo-site h1 {
+      height: 100dvh;
+      padding: 10px 8%;
+      .txt-topo-site strong {
         font-size: 32px;
+      }
+      .txt-topo-site p{
+        font-size: medium;
+        margin: 0;
+      }
+      .informacoes{
+        margin-top: 30px;
       }
       .flex {
         flex-direction: column-reverse;
@@ -70,6 +81,7 @@ export const Container = styled.main`
 
   // ESPECIALIDADES - TELA 2
   .especialidades {
+
     padding: 80px 4%;
 
     h2 span {
@@ -301,6 +313,7 @@ export const Footer = styled.footer`
     width: 99px;
     height: 74px;
   }
+
 
   .flex {
     justify-content: space-between;

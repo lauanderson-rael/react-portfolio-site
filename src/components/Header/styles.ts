@@ -42,6 +42,13 @@ export const Container = styled.header`
   }
 
   @media (max-width: 1010px) {
+    padding: 20px 4%;
+
+    img {
+    width: 70px;
+    height: 52px;
+  }
+
     .menu-desktop,
     .btn-contato {
       display: none;

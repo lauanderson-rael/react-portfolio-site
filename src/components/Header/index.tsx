@@ -34,22 +34,22 @@ export function Header() {
         <nav className="menu-desktop">
           <ul>
             <li>
-              <a href="#">Início</a>
+              <a href="#inicio">Início</a>
             </li>
             <li>
-              <a href=".especialidades">Especialidades</a>
+              <a href="#especialidades">Especialidades</a>
             </li>
             <li>
-              <a href="#">Sobre</a>
+              <a href="#sobre">Sobre</a>
             </li>
             <li>
-              <a href="#">Projetos</a>
+              <a href="#projetos">Projetos</a>
             </li>
           </ul>
         </nav>
 
         <div className="btn-contato">
-          <a href="#">
+          <a href="#formulario">
             <button>Contato</button>
           </a>
         </div>
@@ -71,19 +71,19 @@ export function Header() {
             <nav>
               <ul>
                 <li>
-                  <a href="#">Início</a>
+                  <a href="#inicio">Início</a>
                 </li>
                 <li>
-                  <a href="#">Especialidades</a>
+                  <a href="#especialidades">Especialidades</a>
                 </li>
                 <li>
-                  <a href="#">Sobre</a>
+                  <a href="#sobre">Sobre</a>
                 </li>
                 <li>
-                  <a href="#">Projetos</a>
+                  <a href="#projetos">Projetos</a>
                 </li>
                 <li>
-                  <a href="#">Contato</a>
+                  <a href="#formulario">Contato</a>
                 </li>
               </ul>
             </nav>
