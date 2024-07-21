@@ -1,6 +1,6 @@
 import { Container, Footer, SessaoFormulario } from "./styles";
 import Foto from "../../assets/lau-circle1.png";
-import Foto2 from "../../assets/fotoArLivre.jpg";
+import Foto2 from "../../assets/foto2.jpg";
 import Logo from "../../assets/logo2.png";
 import { FaLaptopCode } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
@@ -32,15 +32,18 @@ export function Main() {
                 </div>
 
                 <div style={{ display: "flex", gap: "30px" }}>
-                  <div className="btn-contato">
+                  <div className="btn-contato linkedin">
                     <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="_blank">
                       <button>Linkedin</button>
                     </a>
                   </div>
 
-                  <div className="btn-contato">
-                    <a href="https://github.com/lauanderson-rael" target="blank" >
-                      <button>Github</button>
+                  <div className="btn-contato curriculo">
+                    <a
+                      href="https://drive.google.com/file/d/1-QXgMBqasKJxM4YEAd7G7C7AWlut7ojf/view?usp=sharing"
+                      target="blank"
+                      download={"curriculo.pdf"}>
+                    <button>Abrir CV</button>
                     </a>
                   </div>
                 </div>
@@ -130,8 +133,6 @@ export function Main() {
             </div>
           </div>
         </section>
-
-
 
         <section className="portfolio" id="projetos">
           <div className="interface">

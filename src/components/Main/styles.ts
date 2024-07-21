@@ -45,6 +45,10 @@ export const Container = styled.main`
     @media (max-width: 1020px) {
       height: 100dvh;
       padding: 10px 8%;
+
+      .btn-contato button{
+        font-size: none;
+      }
       .txt-topo-site strong {
         font-size: 32px;
       }
@@ -131,7 +135,7 @@ export const Container = styled.main`
 
     .img-sobre img {
       width: 344px;
-      height: 485px;
+      /* height: 485px; */
       border-radius: 25px;
     }
     .txt-sobre {

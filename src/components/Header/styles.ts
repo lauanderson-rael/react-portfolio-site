@@ -22,7 +22,7 @@ export const Container = styled.header`
   }
 
   a {
-    color: #5c5c5c;
+    color: #7c7c7c;
     text-decoration: none;
     display: inline-block; // para dar zoon no hover
     transition: all.2s;
