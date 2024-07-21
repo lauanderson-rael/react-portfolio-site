@@ -43,7 +43,7 @@ export const Container = styled.main`
     }
     //responsivo
     @media (max-width: 1020px) {
-      height: 100dvh;
+      height: 100vh;
       padding: 10px 8%;
 
       .btn-contato button{
