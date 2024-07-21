@@ -41,10 +41,22 @@ export const Container = styled.main`
       filter: drop-shadow(0 0 0.8rem #00ff08);
       box-shadow: 1px 1px 0.5rem #00ff08;
     }
+
+    .scroll{
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+      bottom: 0;
+      gap: 5px;
+    }
     //responsivo
     @media (max-width: 1020px) {
       /* height: 100vh; */
       padding: 10px 8%;
+      /* margin-bottom: 60px; */
 
       .btn-contato button{
         font-size: small;
@@ -62,9 +74,11 @@ export const Container = styled.main`
       .flex {
         flex-direction: column-reverse;
         gap: 40px;
+
       }
       .img-topo-site img {
-        width: 100%;
+        width: 250px;
+        height: 250px;
       }
       .btn-contato {
         display: flex;
@@ -138,6 +152,9 @@ export const Container = styled.main`
       /* height: 485px; */
       border-radius: 25px;
     }
+    .img-sobre-mobile img{
+      display: none;
+    }
     .txt-sobre {
       color: #fff;
 
@@ -173,7 +190,7 @@ export const Container = styled.main`
     @media (max-width: 1020px) {
       padding: 30px 8%;
       .flex {
-        flex-direction: column-reverse;
+        flex-direction: column;
       }
       .txt-sobre h2 {
         font-size: 32px;
@@ -184,7 +201,13 @@ export const Container = styled.main`
         text-align: center;
       }
       .img-sobre img {
+        width: 80%;
+        display: none;
+      }
+      .img-sobre-mobile img{
         width: 100%;
+        display: block;
+        margin: 0 auto;
       }
     }
   }

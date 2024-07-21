@@ -55,6 +55,7 @@ export function Main() {
                 <img src={Foto} alt="foto perfil" />
               </div>
             </div>
+
           </div>
         </section>
 
@@ -69,6 +70,9 @@ export function Main() {
                 <h2>
                   Sobre <b style={{color: "#00ff08"}}>mim</b>
                 </h2>
+                <div className="img-sobre img-sobre-mobile">
+                <img src={Foto2} alt="foto sessão sobre" />
+              </div>
                 <p>
                   Apaixonado por desafios e tecnologia, sou um desenvolvedor web
                   júnior com experiência em HTML, CSS e JavaScript, dando meus
