@@ -8,6 +8,12 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 1020px){
+  p{
+    font-size: small;
+  }
+}
+
 body {
   background-color: #000;
   height: 100vh;
@@ -46,6 +52,17 @@ body {
   box-shadow: 0px 0px 8px rgb(30, 30, 30);
   transform: scale(1.05);
 }
+@media (max-width: 1020px) {
+  .curriculo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .curriculo button{
+    font-size: small;
+  }
+}
 
 .flex {
   display: flex;
@@ -67,12 +84,12 @@ h2 span {
 }
 
 .btn-social button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: none;
   background-color: #00ff08;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
   padding-top: 5px;
   margin: 0 5px;

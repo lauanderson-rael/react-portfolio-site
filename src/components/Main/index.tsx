@@ -99,22 +99,22 @@ export function Main() {
                 </div>
 
                 <div className="btn-social">
-                  <a href="#">
+                  <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
                     <button>
                       <FaInstagram />
                     </button>
                   </a>
-                  <a href="#">
+                  <a href="https://www.youtube.com/@lau_dicas" target="blank">
                     <button>
                       <FaYoutube />
                     </button>
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
                     <button>
                       <FaLinkedin />
                     </button>
                   </a>
-                  <a href="#">
+                  <a href="https://github.com/lauanderson-rael" target="blank">
                     <button>
                       <FaGithub />
                     </button>
@@ -225,16 +225,17 @@ export function Main() {
                   <FaGithub />
                 </button>
               </a>
+
+              <a href="maioto:lauanderson38@gmail.com">
+                 <button>
+                    <IoIosMail/>
+                  </button>
+              </a>
             </div>
           </div>
         </div>
         <div className="line-footer borda">
-          <p>
-            <i>
-              <IoIosMail />
-            </i>
-            <a href="maioto:lauanderson38@gmail.com">lauanderson38@gmail.com</a>
-          </p>
+          <span>© 2024 Lauanderson Rael. Todos os direitos reservados</span>
         </div>
       </Footer>
     </>

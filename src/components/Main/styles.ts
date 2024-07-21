@@ -97,53 +97,7 @@ export const Container = styled.main`
     }
   }
 
-  // ESPECIALIDADES - TELA 2
-  .especialidades {
-
-    padding: 80px 4%;
-
-    h2 span {
-      color: #00ff08;
-    }
-    .flex {
-      gap: 60px;
-    }
-
-    // COMPONENTE - ITEM
-    .especialidades-box {
-      color: #fff;
-      padding: 20px;
-      transition: all.2s;
-      margin-top: 45px;
-      border-radius: 20px;
-
-      .icone {
-        font-size: 70px;
-        color: #00ff08;
-      }
-      h3 {
-        font-size: 28px;
-        margin: 15px 0;
-      }
-    }
-
-    .especialidades-box:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #ffffff78;
-    }
-
-    // responsivo
-    @media (max-width: 1020px) {
-      padding: 80px 8%;
-      .especialidades-box {
-        padding: 0;
-        border-radius: 0;
-      }
-
-    }
-  }
-
-  // SESSAO SOBRE - TELA 3
+  // SESSAO SOBRE - TELA 2
   .sobre {
     padding: 80px 0;
 
@@ -178,12 +132,12 @@ export const Container = styled.main`
       }
 
       .btn-social button {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         border-radius: 50%;
         border: none;
         background-color: #00ff08;
-        font-size: 30px;
+        font-size: 25px;
         cursor: pointer;
         padding-top: 5px;
         margin: 0 5px; // cima baixo / laterais
@@ -215,6 +169,52 @@ export const Container = styled.main`
       }
     }
   }
+
+// ESPECIALIDADES - TELA 3
+.especialidades {
+
+padding: 80px 4%;
+
+h2 span {
+  color: #00ff08;
+}
+.flex {
+  gap: 60px;
+}
+
+// COMPONENTE - ITEM
+.especialidades-box {
+  color: #fff;
+  padding: 20px;
+  transition: all.2s;
+  margin-top: 45px;
+  border-radius: 20px;
+
+  .icone {
+    font-size: 70px;
+    color: #00ff08;
+  }
+  h3 {
+    font-size: 28px;
+    margin: 15px 0;
+  }
+}
+
+.especialidades-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffffff78;
+}
+
+// responsivo
+@media (max-width: 1020px) {
+  padding: 80px 8%;
+  .especialidades-box {
+    padding: 0;
+    border-radius: 0;
+  }
+
+}
+}
   // SESSAO PORTIFOLIO - TELA 4
   .portfolio {
     padding: 80px 4%;
@@ -333,6 +333,12 @@ export const SessaoFormulario = styled.section`
       transform: scale(1.05);
     }
   }
+  @media (max-width: 1020px){
+    form input, form textarea{
+      font-size: small;
+
+    }
+    }
 `;
 
 //FOOTER - TELA 6
@@ -352,10 +358,16 @@ export const Footer = styled.footer`
 
   .line-footer {
     padding: 20px 0;
-  }
+    color: #fff;
 
-  .borda {
-    border-top: 2px solid #00ff08;
+  }
+  .line-footer span, .line-footer p a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #7c7c7c;
+
   }
 
   .line-footer p i {
@@ -363,11 +375,9 @@ export const Footer = styled.footer`
     font-size: 22px;
   }
 
-  .line-footer p a {
-    color: #fff;
-  }
 
   @media (max-width: 1020px) {
+    font-size: small;
     .flex {
       gap: 30px;
     }
