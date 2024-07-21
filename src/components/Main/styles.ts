@@ -112,7 +112,7 @@ export const Container = styled.main`
     // COMPONENTE - ITEM
     .especialidades-box {
       color: #fff;
-      padding: 40px;
+      padding: 20px;
       transition: all.2s;
       margin-top: 45px;
       border-radius: 20px;
@@ -135,6 +135,11 @@ export const Container = styled.main`
     // responsivo
     @media (max-width: 1020px) {
       padding: 80px 8%;
+      .especialidades-box {
+        padding: 0;
+        border-radius: 0;
+      }
+
     }
   }
 
@@ -149,7 +154,6 @@ export const Container = styled.main`
 
     .img-sobre img {
       width: 344px;
-      /* height: 485px; */
       border-radius: 25px;
     }
     .img-sobre-mobile img{

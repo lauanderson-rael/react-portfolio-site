@@ -153,7 +153,7 @@ export function Main() {
         <section className="portfolio" id="projetos">
           <div className="interface">
             <h2 className="titulo">
-              Meus <span>Projetos.</span>
+              Meus <span>Projetos</span>
             </h2>
             <div className="flex">
               <Projeto nome="Projeto 1" />
@@ -167,7 +167,7 @@ export function Main() {
         <SessaoFormulario>
           <div>
             <h2 className="titulo">
-              FALA<span> COMIGO</span>
+              Fale<span> comigo</span>
             </h2>
 
             <form action="">
