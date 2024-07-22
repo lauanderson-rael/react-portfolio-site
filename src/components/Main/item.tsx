@@ -1,16 +1,39 @@
 import { ReactNode } from "react";
 type ItemProps = {
-  icone: ReactNode;
+  icone1: ReactNode;
+  icone2: ReactNode;
+  icone3: ReactNode;
+  icone4: ReactNode;
+  title: string;
   nome: string;
-  paragrafo: string;
 };
 
-export function Item({ icone, nome, paragrafo }: ItemProps) {
+export function Item({title, icone1, icone2, icone3, icone4, nome}: ItemProps) {
   return (
     <div className="especialidades-box">
-      <div className="icone">{icone}</div>
-      <h3>{nome}</h3>
-      <p>{paragrafo}</p>
+      <strong>{title}</strong>
+
+     <div className="flex-skills">
+      <div>
+        <div className="icone">{icone1}</div>
+        <p>{nome}</p>
+      </div>
+      <div>
+        <div className="icone">{icone3}</div>
+        <p>{nome}</p>
+      </div>
+
+      <div>
+        <div className="icone">{icone2}</div>
+        <p>{nome}</p>
+      </div>
+      <div>
+        <div className="icone">{icone4}</div>
+        <p>{nome}</p>
+      </div>
+
+     </div>
+
     </div>
   );
 }

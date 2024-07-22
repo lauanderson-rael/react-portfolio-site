@@ -2,15 +2,19 @@ import { Container, Footer, SessaoFormulario } from "./styles";
 import Foto from "../../assets/lau-circle1.png";
 import Foto2 from "../../assets/foto2.jpg";
 import Logo from "../../assets/logo2.png";
-import { FaLaptopCode } from "react-icons/fa";
-import { IoCart } from "react-icons/io5";
-import { FaWordpress } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+//icones skills
+import { SiJavascript } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+
+
 
 
 import { Item } from "./item";
@@ -130,22 +134,25 @@ export function Main() {
             <h2 className="titulo">
               Minhas <span>habilidades</span>
             </h2>
-            <div className="flex">
+            <div className="flex-NO">
               <Item
-                icone={<FaLaptopCode />}
-                nome="Website"
-                paragrafo="Um website é uma coleção de páginas da web interconectadas, acessíveis através da internet. Websites são usados para diversos propósitos, como fornecer informações sobre uma empresa, produto ou serviço, compartilhar conteúdo pessoal ou profissional, vender produtos online, entre outros. Eles são uma ferramenta fundamental para comunicação, comércio e interação na era digital."
+                title="Front-end"
+                icone1={<SiJavascript />}
+                icone2={<SiTypescript/>}
+                icone3={<FaReact/>}
+                icone4={<SiTailwindcss/>}
+                nome="skill"
               />
               <Item
-                icone={<IoCart />}
-                nome="Loja online"
-                paragrafo="A loja virtual é o site onde uma pessoa pode comprar produtos pela internet. Já uma loja online, que também é chamada de e-commerce, tem a ver com começar um negócio para vender produtos a partir da internet. Ou seja, uma loja física também pode ter uma loja virtual para vender os produtos da marca."
+                title="Back-end"
+                icone1={<SiJavascript />}
+                icone2={<SiTypescript />}
+                icone3={<FaReact/>}
+                icone4={<SiTailwindcss/>}
+                nome=""
               />
-              <Item
-                icone={<FaWordpress />}
-                nome="Blog"
-                paragrafo="Um blog é um tipo de site onde as pessoas compartilham regularmente conteúdo novo sobre uma variedade de tópicos. Pode incluir desde notícias e opiniões pessoais até tutoriais, receitas, viagens e muito mais. É uma plataforma para comunicação, expressão criativa e compartilhamento de informações na internet."
-              />
+
+
             </div>
           </div>
         </section>

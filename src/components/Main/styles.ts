@@ -186,36 +186,45 @@ h2 span {
 .especialidades-box {
   color: #fff;
   padding: 20px;
-  transition: all.2s;
+  margin: 0 auto;
   margin-top: 45px;
   border-radius: 20px;
+  border: 1px solid #7c7c7c;
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .icone {
-    font-size: 70px;
+    font-size: 45px;
     color: #00ff08;
   }
-  h3 {
-    font-size: 28px;
-    margin: 15px 0;
+  strong{
+    margin-bottom: 30px;
+  }
+
+  .flex-skills{
+    display: flex;
+    row-gap: 40px;
+    column-gap: 20px;
   }
 }
 
-.especialidades-box:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px #ffffff78;
-}
 
 // responsivo
 @media (max-width: 1020px) {
   padding: 80px 8%;
   .especialidades-box {
     padding: 0;
-    border-radius: 0;
+    padding: 20px;
+
   }
 
 }
 }
-  // SESSAO PORTIFOLIO - TELA 4
+// SESSAO PORTIFOLIO - TELA 4
   .portfolio {
     padding: 80px 4%;
     margin-top: 80px;
