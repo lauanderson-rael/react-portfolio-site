@@ -35,7 +35,7 @@ export function Main() {
                   </div>
 
                   <div className="btn-contato github">
-                    <a
+                    <a 
                       href="https://github.com/lauanderson-rael"
                       target="blank"
                       download={"curriculo.pdf"}>
