@@ -236,8 +236,8 @@ export const Container = styled.main`
 
 // SESSAO PORTIFOLIO - TELA 4
   .portfolio {
-    padding: 80px 4%;
-    margin-top: 80px;
+    // padding: 80px 4%;
+    margin-top: 30px;
 
     .flex {
       justify-content: space-around;
