@@ -69,19 +69,12 @@ export function Main() {
                   <img src={Foto2} alt="foto sessão sobre" />
                 </div>
                 <p>
-                  Apaixonado por desafios e tecnologia, sou um desenvolvedor web
-                  júnior com experiência em HTML, CSS e JavaScript, dando meus
-                  primeiros passos no mundo do ReactJS. No momento estou
-                  cursando o 2º semestre de Análise e Desenvolvimento de
-                  Sistemas. Adoro explorar novas tecnologias, desafiar minhas
-                  habilidades com os códigos e utilizá-las para criar soluções
-                  inovadoras e de alta qualidade.
+                  Apaixonado por desafios e tecnologia, sou um desenvolvedor front-end com experiência em HTML, CSS, JavaScript, ReactJS , TypeScript e Node.js. Atualmente, estou me aprofundando no back-end para me tornar um desenvolvedor full stack. Estou cursando o 2º semestre de Análise e Desenvolvimento de Sistemas. Adoro explorar novas tecnologias, desafiar minhas habilidades com os códigos e utilizá-las para criar soluções inovadoras e de alta qualidade.
+
                 </p>
                 <p>
-                  Atualmente desenvolvo projetos pessoais para praticar minhas
-                  habilidades e construir meu portfólio. Isso incluir sites
-                  simples, aplicativos da web e até mesmo contribuições para
-                  projetos de código aberto.
+                  Atualmente Desenvolvo projetos pessoais para praticar minhas habilidades e construir meu portfólio, incluindo sites simples, aplicativos da web e até mesmo contribuições para projetos de código aberto.
+
                 </p>
 
                 <div className="btn-contato curriculo">
@@ -127,7 +120,7 @@ export function Main() {
             </h2>
             <div className="flex-NO">
 
-              <ContainerSkills/>
+              <ContainerSkills />
 
             </div>
           </div>
