@@ -8,17 +8,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaCloudDownloadAlt } from "react-icons/fa";
-//icones skills
-import { SiJavascript } from "react-icons/si";
-import { SiTypescript } from "react-icons/si";
-import { FaReact } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-
-
-
-
-import { Item } from "./item";
 import { Projeto } from "./projeto";
+import { ContainerSkills } from "./containerSkills";
 
 export function Main() {
   return (
@@ -29,18 +20,18 @@ export function Main() {
             <div className="flex">
               <div className="txt-topo-site">
 
-                 <div className="informacoes">
-                    <p>Olá, eu sou</p>
+                <div className="informacoes">
+                  <p>Olá, eu sou</p>
 
-                    <strong>Lauanderson Rael</strong>
+                  <strong>Lauanderson Rael</strong>
 
-                    <p>Desenvolvedor Front-end</p>
+                  <p>Desenvolvedor Front-end</p>
                 </div>
 
                 <div style={{ display: "flex", gap: "30px" }}>
                   <div className="btn-contato linkedin">
                     <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="_blank">
-                      <button> <FaLinkedin style={{width: "30px"}}/> Linkedin</button>
+                      <button> <FaLinkedin style={{ width: "30px" }} /> Linkedin</button>
                     </a>
                   </div>
 
@@ -49,7 +40,7 @@ export function Main() {
                       href="https://github.com/lauanderson-rael"
                       target="blank"
                       download={"curriculo.pdf"}>
-                    <button><FaGithub style={{width: "30px"}}/> GitHub</button>
+                      <button><FaGithub style={{ width: "30px" }} /> GitHub</button>
                     </a>
                   </div>
                 </div>
@@ -72,11 +63,11 @@ export function Main() {
 
               <div className="txt-sobre">
                 <h2>
-                  Sobre <b style={{color: "#00ff08"}}>mim</b>
+                  Sobre <b style={{ color: "#00ff08" }}>mim</b>
                 </h2>
                 <div className="img-sobre img-sobre-mobile">
-                <img src={Foto2} alt="foto sessão sobre" />
-              </div>
+                  <img src={Foto2} alt="foto sessão sobre" />
+                </div>
                 <p>
                   Apaixonado por desafios e tecnologia, sou um desenvolvedor web
                   júnior com experiência em HTML, CSS e JavaScript, dando meus
@@ -98,7 +89,7 @@ export function Main() {
                     href="https://drive.google.com/file/d/1-QXgMBqasKJxM4YEAd7G7C7AWlut7ojf/view?usp=sharing"
                     target="blank"
                     download={"curriculo.pdf"}>
-                  <button> <FaCloudDownloadAlt style={{width: "30px"}}/> Currículo</button>
+                    <button> <FaCloudDownloadAlt style={{ width: "30px" }} /> Currículo</button>
                   </a>
                 </div>
 
@@ -135,23 +126,8 @@ export function Main() {
               Minhas <span>habilidades</span>
             </h2>
             <div className="flex-NO">
-              <Item
-                title="Front-end"
-                icone1={<SiJavascript />}
-                icone2={<SiTypescript/>}
-                icone3={<FaReact/>}
-                icone4={<SiTailwindcss/>}
-                nome="skill"
-              />
-              <Item
-                title="Back-end"
-                icone1={<SiJavascript />}
-                icone2={<SiTypescript />}
-                icone3={<FaReact/>}
-                icone4={<SiTailwindcss/>}
-                nome=""
-              />
 
+              <ContainerSkills/>
 
             </div>
           </div>
@@ -163,9 +139,9 @@ export function Main() {
               Meus <span>Projetos</span>
             </h2>
             <div className="flex">
-              <Projeto nome="Projeto 1" />
-              <Projeto nome="Projeto 2" />
-              <Projeto nome="Projeto 3" />
+              <Projeto nome="Em desenvolvimento..." />
+              <Projeto nome="Em desenvolvimento..." />
+              <Projeto nome="Em desenvolvimento..." />
             </div>
           </div>
         </section>
@@ -234,9 +210,9 @@ export function Main() {
               </a>
 
               <a href="maioto:lauanderson38@gmail.com">
-                 <button>
-                    <IoIosMail/>
-                  </button>
+                <button>
+                  <IoIosMail />
+                </button>
               </a>
             </div>
           </div>
