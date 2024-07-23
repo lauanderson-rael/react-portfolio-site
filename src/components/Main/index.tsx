@@ -181,28 +181,28 @@ export function Main() {
             </div>
 
             <div className="btn-social">
-              <a href="#">
+             <a href="https://www.instagram.com/lauanderson.rael?igsh=MWMxNDZjN3VhdjA3Nw==" target="blank">
                 <button>
                   <FaInstagram />
                 </button>
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/@lau_dicas" target="blank">
                 <button>
                   <FaYoutube />
                 </button>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/in/lauanderson-rael-a68b2b16a/" target="blank">
                 <button>
                   <FaLinkedin />
                 </button>
               </a>
-              <a href="#">
+              <a href="https://github.com/lauanderson-rael" target="blank">
                 <button>
                   <FaGithub />
                 </button>
               </a>
 
-              <a href="maioto:lauanderson38@gmail.com">
+              <a href="lauanderson38@gmail.com">
                 <button>
                   <IoIosMail />
                 </button>
