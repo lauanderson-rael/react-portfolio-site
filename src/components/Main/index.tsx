@@ -202,7 +202,7 @@ export function Main() {
                 </button>
               </a>
 
-              <a href="lauanderson38@gmail.com">
+              <a  href="mailto:lauanderson38@gmail.com" target="blank">
                 <button>
                   <IoIosMail />
                 </button>
