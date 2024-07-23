@@ -42,7 +42,13 @@ export const Container = styled.header`
   }
 
   @media (max-width: 1010px) {
-    padding: 20px 4%;
+    // barra header fixo aqui
+    padding: 10px;
+    padding-bottom: 0px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 3000;
 
     img {
     width: 70px;
