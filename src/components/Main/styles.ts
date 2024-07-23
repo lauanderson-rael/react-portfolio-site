@@ -264,6 +264,8 @@ export const Container = styled.main`
     }
     .portfolio .flex {
       gap: 40px;
+      justify-content: center;
+      align-items: center;
     }
   }
 `;
