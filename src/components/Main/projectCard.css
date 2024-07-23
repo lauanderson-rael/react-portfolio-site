@@ -62,4 +62,12 @@
     font-size: 0.875rem;
     color: #333;
   }
+
+@media (max-width: 1020px) {
+    .project-card {
+    max-width: none;
+    
+  }
+
+}
   
