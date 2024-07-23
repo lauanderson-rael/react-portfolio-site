@@ -8,9 +8,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaCloudDownloadAlt } from "react-icons/fa";
-import { Projeto } from "./projeto";
 import { ContainerSkills } from "./containerSkills";
-
+import ProjectCard from "./projectCard";
 export function Main() {
   return (
     <>
@@ -132,9 +131,31 @@ export function Main() {
               Meus <span>Projetos</span>
             </h2>
             <div className="flex">
-              <Projeto nome="Em desenvolvimento..." />
-              <Projeto nome="Em desenvolvimento..." />
-              <Projeto nome="Em desenvolvimento..." />
+            <ProjectCard
+              image="https://img.freepik.com/free-vector/realistic-glassmorphism-mobile-app-template_23-2149443264.jpg"
+              title="Projeto 01"
+              description="Um breve resumo sobre o projeto que mostra suas funcionalidades e objetivos."
+              projectLink="https://example.com"
+              repoLink="https://github.com/usuario/repositorio"
+              technologies={['React', 'CSS', 'JavaScript']}
+            />
+            <ProjectCard
+              image="https://www.datocms-assets.com/38511/1666264628-ui-design-process-image-3-sketches-and-wireframes-c.png?auto=format"
+              title="Projeto 02"
+              description="Um breve resumo sobre o projeto que mostra suas funcionalidades e objetivos."
+              projectLink="https://example.com"
+              repoLink="https://github.com/usuario/repositorio"
+              technologies={['React', 'CSS', 'JavaScript']}
+            />
+            <ProjectCard
+              image="https://blog.icons8.com/wp-content/uploads/2020/02/moose-stock-photos-ui-design.jpg"
+              title="Projeto 03"
+              description="Um breve resumo sobre o projeto que mostra suas funcionalidades e objetivos."
+              projectLink="https://example.com"
+              repoLink="https://github.com/usuario/repositorio"
+              technologies={['React', 'CSS', 'JavaScript']}
+            />
+
             </div>
           </div>
         </section>
