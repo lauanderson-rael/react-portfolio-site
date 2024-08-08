@@ -145,7 +145,7 @@ export const Container = styled.main`
     }
     // responsivo - sobre
     @media (max-width: 1020px) {
-      padding: 30px 8%;
+      padding: 30px 4%;
       .flex {
         flex-direction: column;
       }
@@ -219,7 +219,7 @@ export const Container = styled.main`
 
   // responsivo
   @media (max-width: 1020px) {
-    padding: 80px 8%;
+    padding: 80px 4%;
     .especialidades-box {
       padding: 0;
       padding: 20px;

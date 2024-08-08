@@ -42,7 +42,16 @@
     display: inline-block;
     margin-right: 8px;
     color: #007bff;
+    color: #00ff08;
     text-decoration: none;
+  }
+  .project-link:hover{
+    color: #00a206;
+  }
+  .icon-link{
+    margin-right: 5px;
+    align-items: center;
+
   }
 
   .project-link:hover {
@@ -57,10 +66,12 @@
 
   .technology {
     background-color: #f1f1f1;
+    background-color: #333;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 0.875rem;
     color: #333;
+    color: rgba(255, 255, 255, 0.801);
   }
 
 @media (max-width: 1020px) {

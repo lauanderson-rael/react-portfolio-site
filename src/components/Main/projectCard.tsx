@@ -1,4 +1,7 @@
 import React from 'react';
+import { IoOpen } from "react-icons/io5";
+import { FaCodeBranch } from "react-icons/fa";
+
 import './projectCard.css'; // Importa o CSS para estilizar o componente
 
 interface ProjectCardProps {
@@ -26,10 +29,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         <p className="project-description">{description}</p>
         <div className="project-links" style={{color: "#fff"}}>
           <a href={projectLink} target="_blank" rel="noopener noreferrer" className="project-link">
+            <IoOpen className='icon-link'/>
             visualizar projeto
           </a>
           <span style={{margin: "0 10px"}}></span>
           <a href={repoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+            <FaCodeBranch className='icon-link' />
             Repositorio
           </a>
         </div>
