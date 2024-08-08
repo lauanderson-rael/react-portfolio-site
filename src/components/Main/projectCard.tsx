@@ -24,12 +24,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className="project-content">
         <h2 className="project-title">{title}</h2>
         <p className="project-description">{description}</p>
-        <div className="project-links">
+        <div className="project-links" style={{color: "#fff"}}>
           <a href={projectLink} target="_blank" rel="noopener noreferrer" className="project-link">
-            View Project
+            visualizar projeto
           </a>
+          <span style={{margin: "0 10px"}}></span>
           <a href={repoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-            View Repository
+            Repositorio
           </a>
         </div>
         <div className="project-technologies">

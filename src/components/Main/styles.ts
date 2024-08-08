@@ -263,7 +263,7 @@ export const Container = styled.main`
       margin: 0 auto;
     }
     .portfolio .flex {
-      gap: 40px;
+      /* gap: 40px; */
       justify-content: center;
       align-items: center;
     }

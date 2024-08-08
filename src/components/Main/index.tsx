@@ -35,7 +35,7 @@ export function Main() {
                   </div>
 
                   <div className="btn-contato github">
-                    <a 
+                    <a
                       href="https://github.com/lauanderson-rael"
                       target="blank"
                       download={"curriculo.pdf"}>
@@ -132,27 +132,27 @@ export function Main() {
             </h2>
             <div className="flex">
             <ProjectCard
-              image="https://img.freepik.com/free-vector/realistic-glassmorphism-mobile-app-template_23-2149443264.jpg"
-              title="Projeto 01"
-              description="Um breve resumo sobre o projeto que mostra suas funcionalidades e objetivos."
-              projectLink="https://example.com"
-              repoLink="https://github.com/usuario/repositorio"
+              image="./public/p1.png"
+              title="Site de Zebras de Futebol"
+              description="Nesse projeto criei o Front end de um site de apostas esportivas. Pude colocar em prática muitos de meus conhecimentos em Desiner Responsivo"
+              projectLink="https://templates-zebras.vercel.app/home/index.html"
+              repoLink="https://github.com/lauanderson-rael/templates-zebras"
+              technologies={['html', 'CSS', 'JavaScript']}
+            />
+            <ProjectCard
+              image="./public/p2.png"
+              title="Lista de Heróis"
+              description="Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem. "
+              projectLink="https://react-list-heroes-chi.vercel.app/"
+              repoLink="https://github.com/lauanderson-rael/react-list-heroes"
               technologies={['React', 'CSS', 'JavaScript']}
             />
             <ProjectCard
-              image="https://www.datocms-assets.com/38511/1666264628-ui-design-process-image-3-sketches-and-wireframes-c.png?auto=format"
-              title="Projeto 02"
-              description="Um breve resumo sobre o projeto que mostra suas funcionalidades e objetivos."
-              projectLink="https://example.com"
-              repoLink="https://github.com/usuario/repositorio"
-              technologies={['React', 'CSS', 'JavaScript']}
-            />
-            <ProjectCard
-              image="https://blog.icons8.com/wp-content/uploads/2020/02/moose-stock-photos-ui-design.jpg"
-              title="Projeto 03"
-              description="Um breve resumo sobre o projeto que mostra suas funcionalidades e objetivos."
-              projectLink="https://example.com"
-              repoLink="https://github.com/usuario/repositorio"
+              image="./public/p3.png"
+              title="Todo List"
+              description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
+              projectLink="https://react-todo-list-three-beta.vercel.app/"
+              repoLink="https://github.com/lauanderson-rael/react-todo-list"
               technologies={['React', 'CSS', 'JavaScript']}
             />
 
