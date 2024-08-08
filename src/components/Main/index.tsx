@@ -2,6 +2,9 @@ import { Container, Footer, SessaoFormulario } from "./styles";
 import Foto from "../../assets/lau-circle1.png";
 import Foto2 from "../../assets/foto2.jpg";
 import Logo from "../../assets/logo2.png";
+import p1 from "../../assets/p1.png"
+import p2 from "../../assets/p2.png"
+import p3 from "../../assets/p3.png"
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -132,7 +135,7 @@ export function Main() {
             </h2>
             <div className="flex">
             <ProjectCard
-              image="./public/p1.png"
+              image={p1}
               title="Site de Zebras de Futebol"
               description="Nesse projeto criei o Front end de um site de apostas esportivas. Pude colocar em prática muitos de meus conhecimentos em Desiner Responsivo"
               projectLink="https://templates-zebras.vercel.app/home/index.html"
@@ -140,7 +143,7 @@ export function Main() {
               technologies={['html', 'CSS', 'JavaScript']}
             />
             <ProjectCard
-              image="./public/p2.png"
+              image={p2}
               title="Lista de Heróis"
               description="Nesse projeto fiz o consumo de uma Api Rest, realizei requisições GET com Axios e também adicionei algumas funcionalidades como as opções de listagem e filtragem. "
               projectLink="https://react-list-heroes-chi.vercel.app/"
@@ -148,7 +151,7 @@ export function Main() {
               technologies={['React', 'CSS', 'JavaScript']}
             />
             <ProjectCard
-              image="./public/p3.png"
+              image={p3}
               title="Todo List"
               description="Nesse projeto desenvolvi um Todo List básico utilizando a biblioteca React. Pude abordar o uso de alguns Hooks do react, como useState"
               projectLink="https://react-todo-list-three-beta.vercel.app/"
