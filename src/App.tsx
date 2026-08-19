@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route, Outlet} from "react-router-dom";
 import { Main } from "./pages/Main";
 import Blog from "./pages/Blog";
+import Youtube from "./pages/Youtube";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { ThemeProvider } from "./contexts/ThemeContext";
@@ -34,6 +35,7 @@ function App() {
           <Route path="/" element={<Layout/>}>
             <Route index element={<Main />} /> {/* Rota inicial */}
             <Route path="/blog" element={<Blog/>} />
+            <Route path="/youtube" element={<Youtube/>} />
 
             <Route path="/login" element={<Login />} />
             <Route path="/protected" element={<ProtectedPage />} />

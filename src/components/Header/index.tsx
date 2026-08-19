@@ -11,7 +11,7 @@ import { MdLightMode, MdNightlight } from "react-icons/md";
 export function Header() {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
-  const isBlog = location.pathname === "/blog";
+  const isCustomPage = location.pathname === "/blog" || location.pathname === "/youtube";
 
   const referencia1 = useRef<HTMLDivElement | null>(null);
   const AbrirMenu = () => {
@@ -56,7 +56,7 @@ export function Header() {
             <li className="header-home">
               <Link to={"/"}><IoMdHome size={22}/></Link>
             </li>
-            {!isBlog && (
+            {!isCustomPage && (
               <li className="header-home">
                 <Link to={"/login"}>Admin</Link>
               </li>
@@ -74,8 +74,13 @@ export function Header() {
               <a href="#formulario">Contato</a>
             </li>
             <li className="li-blog">
-              <Link to={"/blog"} style={{color: 'var(--text-color-blue-green)'}}>
+              <Link to={"/blog"} style={{color: location.pathname === "/blog" ? 'var(--text-color-blue-green)' : 'inherit'}}>
                 Blog
+              </Link>
+            </li>
+            <li className="li-blog">
+              <Link to={"/youtube"} style={{color: location.pathname === "/youtube" ? 'var(--text-color-blue-green)' : 'inherit'}}>
+                YouTube
               </Link>
             </li>
           </ul>
@@ -115,7 +120,7 @@ export function Header() {
                    </Link>
                 </li>
 
-                {!isBlog && (
+                {!isCustomPage && (
                   <li className="header-home">
                     <Link to={"/login"}>Admin</Link>
                   </li>
@@ -135,6 +140,9 @@ export function Header() {
 
                 <li>
                   <Link to={"/blog"}>Blog</Link>
+                </li>
+                <li>
+                  <Link to={"/youtube"}>YouTube</Link>
                 </li>
               </ul>
             </nav>
