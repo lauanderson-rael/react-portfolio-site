@@ -19,7 +19,7 @@ export const Container = styled.div`
 `;
 
 export const YoutubeHero = styled.div`
-  padding: 120px 4% 40px 4%;
+  padding: 20px 4% 40px 4%;
   max-width: 1280px;
   margin: 0 auto;
   text-align: center;
