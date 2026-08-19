@@ -1,5 +1,16 @@
 import { useState, useEffect } from "react";
-import { Container, SessaoFormulario } from "./styles";
+import {
+  Container,
+  BlogHero,
+  SearchBox,
+  PostGrid,
+  PostCard,
+  LoadingContainer,
+  EmptyState,
+  LegalNotice,
+  SessaoFormulario,
+} from "./styles";
+import { FiSearch, FiArrowUpRight } from "react-icons/fi";
 
 type Post = {
   id: string;
@@ -18,7 +29,7 @@ export default function Blog() {
     nome: "",
     email: "",
     celular: "",
-    mensagem: ""
+    mensagem: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,68 +37,58 @@ export default function Blog() {
     const { nome, email, celular, mensagem } = formData;
     const subject = `Pergunta de ${nome}`;
     const body = `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\nMensagem:\n${mensagem}`;
-    window.location.href = `mailto:lauanderson38@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:lauanderson38@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
   };
 
   const handleReset = () => {
     setFormData({ nome: "", email: "", celular: "", mensagem: "" });
   };
 
-  const postsRev = post; // CurrentsAPI returns sorted by date usually
-
-  // Filtro baseado no título
-  const filteredPosts = postsRev.filter((item) =>
+  const filteredPosts = post.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Carregamento inicial dos dados
- useEffect(() => {
-  async function loadApi() {
-    const apiKey = import.meta.env.VITE_CURRENTS_API_KEY;
+  useEffect(() => {
+    async function loadApi() {
+      const apiKey = import.meta.env.VITE_CURRENTS_API_KEY;
+      const keywords = encodeURIComponent(
+        "tecnologia OR programação OR inteligência artificial"
+      );
+      const url = `https://api.currentsapi.services/v1/search?keywords=${keywords}&language=pt&page_size=12`;
 
-    const keywords = encodeURIComponent(
-      "programação OR tecnologia OR inteligência artificial OR IA"
-    );
+      try {
+        const res = await fetch(url, {
+          headers: {
+            Authorization: apiKey ? `Bearer ${apiKey}` : "",
+          },
+        });
 
-    const url = `https://api.currentsapi.services/v1/search?keywords=${keywords}&language=pt&country=BR&category=technology`;
+        const data = await res.json();
 
-    try {
-      const res = await fetch(url, {
-        headers: {
-          Authorization: apiKey
+        if (data.status === "ok" && Array.isArray(data.news)) {
+          setPost(data.news.slice(0, 10));
+        } else {
+          console.error("Erro na API:", data);
         }
-      });
-
-      const data = await res.json();
-
-      if (data.status === "ok") {
-        setPost(data.news);
-      } else {
-        console.error("Erro na API:", data);
+      } catch (error) {
+        console.error("Erro ao carregar notícias:", error);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error("Erro ao carregar notícias:", error);
-    } finally {
-      setLoading(false);
     }
-  }
 
-  loadApi();
-}, []);
+    loadApi();
+  }, []);
 
   if (loading) {
     return (
       <Container>
-        <h1
-          style={{
-            height: "60vh",
-            display: "grid",
-            placeItems: "center",
-            color: "var(--text-color)",
-          }}
-        >
-          Carregando ...
-        </h1>
+        <LoadingContainer>
+          <div className="spinner" />
+          <p>Carregando notícias de tecnologia...</p>
+        </LoadingContainer>
       </Container>
     );
   }
@@ -95,124 +96,129 @@ export default function Blog() {
   return (
     <>
       <Container>
-        <div className="container">
-          {/* HEADER COM BUSCA */}
-          <header>
-            <div>
-              <h3>LauBlog</h3>
-            </div>
+        {/* HERO E BARRA DE BUSCA */}
+        <BlogHero>
+          <h1>
+            Lau<span>Blog</span>
+          </h1>
+          <p>
+            Fique por dentro das últimas notícias sobre Tecnologia, Programação e
+            Inteligência Artificial.
+          </p>
 
+          <SearchBox>
+            <FiSearch />
             <input
               type="text"
-              placeholder="Buscar por título..."
+              placeholder="Buscar notícias por título..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              style={{
-                padding: "4px 12px",
-                margin: "4px 0",
-                borderRadius: "6px",
-                border: "1px solid #ccc",
-                width: "256px",
-                outline: "none",
-                minWidth: "200px",
-                fontSize: "0.9rem",
-                marginLeft: "10px",
-              }}
             />
-          </header>
+          </SearchBox>
+        </BlogHero>
 
-          {/* LISTAGEM DOS POSTS */}
-          <main style={{ flex: 1 }}>
-            {filteredPosts.length > 0 ? (
-              filteredPosts.map((item) => (
-                <article key={item.id}>
-                  <img src={item.image !== "None" ? item.image : "https://via.placeholder.com/400x200?text=No+Image"} alt={item.title} />
-                  <div className="content">
-                    <h2>{item.title}</h2>
-                    <p>{item.description}</p>
-                  </div>
-                  <div style={{ marginTop: "5px" }}>
-                    <strong>Categoria: </strong> <span>{item.category.join(", ") || "Tecnologia"}</span>
-                  </div>
-                  <a href={item.url} target="_blank" rel="noopener noreferrer">
-                    <button> Ler mais</button>
+        {/* LISTAGEM DOS POSTS */}
+        <PostGrid>
+          {filteredPosts.length > 0 ? (
+            filteredPosts.map((item) => (
+              <PostCard key={item.id}>
+                <div className="card-image">
+                  <img
+                    src={
+                      item.image && item.image !== "None"
+                        ? item.image
+                        : "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                    }
+                    alt={item.title}
+                  />
+                  <span className="category-badge">
+                    {item.category && item.category.length > 0
+                      ? item.category[0]
+                      : "Tecnologia"}
+                  </span>
+                </div>
+                <div className="card-body">
+                  <h2>{item.title}</h2>
+                  <p>
+                    {item.description ||
+                      "Clique em ler mais para conferir a notícia completa no site original."}
+                  </p>
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button>
+                      Ler mais <FiArrowUpRight />
+                    </button>
                   </a>
-                </article>
-              ))
-            ) : (
-              <p
-                style={{
-                  color: "gray",
-                  fontStyle: "italic",
-                  padding: "20px",
-                  textAlign: "center",
-                }}
-              >
-                Nenhum post encontrado com esse título.
+                </div>
+              </PostCard>
+            ))
+          ) : (
+            <EmptyState>
+              <h3>Nenhuma notícia encontrada</h3>
+              <p>
+                Tente buscar por outros termos como "IA", "React" ou
+                "Tecnologia".
               </p>
-            )}
-          </main>
-        </div>
+            </EmptyState>
+          )}
+        </PostGrid>
 
         {/* AVISO LEGAL */}
-        <p
-          style={{
-            fontSize: "12px",
-            color: "gray",
-            textAlign: "justify",
-            padding: "10px",
-            width: "90%",
-            margin: "0 auto",
-          }}
-        >
-          As imagens e descrições exibidas neste blog são de terceiros e
-          pertencem aos respectivos autores. Ao clicar nos links, você será
-          redirecionado para o site original, onde pode encontrar o conteúdo
-          completo. Todos os direitos reservados aos autores.
-        </p>
-        <br />
+        <LegalNotice>
+          As imagens e descrições exibidas neste blog são fornecidas por serviços de terceiros e pertencem aos respectivos autores. Ao clicar no botão "Ler mais", você será redirecionado para a publicação original. Todos os direitos reservados aos autores.
+        </LegalNotice>
       </Container>
 
       {/* FORMULÁRIO DE CONTATO */}
       <SessaoFormulario>
-        <div>
-          <h2 className="titulo">
-            Faça sua <span>Pergunta</span>
-          </h2>
+        <h2 className="titulo">
+          Faça sua <span>Pergunta</span>
+        </h2>
 
-          <form onSubmit={handleSubmit}>
-            <input 
-              type="text" 
-              placeholder="Seu nome completo" 
-              value={formData.nome}
-              onChange={(e) => setFormData({...formData, nome: e.target.value})}
-              required 
-            />
-            <input 
-              type="text" 
-              placeholder="Seu e-mail" 
-              value={formData.email}
-              onChange={(e) => setFormData({...formData, email: e.target.value})}
-              required 
-            />
-            <input 
-              type="text" 
-              placeholder="Seu celular" 
-              value={formData.celular}
-              onChange={(e) => setFormData({...formData, celular: e.target.value})}
-            />
-            <textarea 
-              placeholder="Sua mensagem"
-              value={formData.mensagem}
-              onChange={(e) => setFormData({...formData, mensagem: e.target.value})}
-            ></textarea>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Seu nome completo"
+            value={formData.nome}
+            onChange={(e) =>
+              setFormData({ ...formData, nome: e.target.value })
+            }
+            required
+          />
+          <input
+            type="email"
+            placeholder="Seu e-mail"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+            required
+          />
+          <input
+            type="tel"
+            placeholder="Seu celular"
+            value={formData.celular}
+            onChange={(e) =>
+              setFormData({ ...formData, celular: e.target.value })
+            }
+          />
+          <textarea
+            placeholder="Sua mensagem"
+            value={formData.mensagem}
+            onChange={(e) =>
+              setFormData({ ...formData, mensagem: e.target.value })
+            }
+            required
+          ></textarea>
 
-            <div className="btn-enviar">
-              <input type="submit" value="ENVIAR" />
-              <input type="button" value="LIMPAR" onClick={handleReset} />
-            </div>
-          </form>
-        </div>
+          <div className="btn-enviar">
+            <input type="submit" value="ENVIAR" />
+            <input type="button" value="LIMPAR" onClick={handleReset} />
+          </div>
+        </form>
       </SessaoFormulario>
     </>
   );

@@ -143,19 +143,19 @@ export function Main() {
                 </div>
                 <p>
                   Olá, sou Lauanderson, um apaixonado por tecnologia e
-                  desenvolvimento web.                   Graduado em Análise e
+                  desenvolvimento web. Graduado em Análise e
                   Desenvolvimento de Sistemas pelo IFMA em 2026. Possuo experiência em
                   desenvolvimento full stack, atuando como Desenvolvedor Júnior
-                  na OKN, onde aplico IA ao desenvolvimento de software, SDD e
+                  atualmente, onde aplico IA ao desenvolvimento de software, SDD e
                   ferramentas como SpecKit, Codex e MCP. Tenho experiência com
                   React, Next.js, Node.js, TypeScript e Python. Além disso,
                   possuo conhecimentos em Linux, Docker e boas práticas de
-                  versionamento com Git e GitHub.
+                  versionamento com Git e GitHub. 
                 </p>
 
                 <div className="btn-contato curriculo">
                   <a
-                    href="https://drive.google.com/file/d/1-Dranqc6snOh3sVkwXV36S100P-LQBAH/view?usp=sharing"
+                    href={import.meta.env.VITE_CV_URL}
                     target="blank"
                     download={"curriculo_lauanderson.pdf"}
                   >

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Container } from "./styles";
 import { IoMdClose, IoMdHome } from "react-icons/io";
 import { BsList } from "react-icons/bs";
@@ -10,6 +10,8 @@ import { MdLightMode, MdNightlight } from "react-icons/md";
 
 export function Header() {
   const { theme, toggleTheme } = useTheme();
+  const location = useLocation();
+  const isBlog = location.pathname === "/blog";
 
   const referencia1 = useRef<HTMLDivElement | null>(null);
   const AbrirMenu = () => {
@@ -54,9 +56,11 @@ export function Header() {
             <li className="header-home">
               <Link to={"/"}><IoMdHome size={22}/></Link>
             </li>
-            <li className="header-home">
-              <Link to={"/login"}>Admin</Link>
-            </li>
+            {!isBlog && (
+              <li className="header-home">
+                <Link to={"/login"}>Admin</Link>
+              </li>
+            )}
             <li className="header-blog">
               <a href="#especialidades">Especialidades</a>
             </li>
@@ -111,9 +115,11 @@ export function Header() {
                    </Link>
                 </li>
 
-                <li className="header-home">
-                  <Link to={"/login"}>Admin</Link>
-                </li>
+                {!isBlog && (
+                  <li className="header-home">
+                    <Link to={"/login"}>Admin</Link>
+                  </li>
+                )}
                 <li className="header-blog">
                   <a href="#especialidades">Especialidades</a>
                 </li>
