@@ -297,6 +297,39 @@ export const Container = styled.main`
     }
   }
 
+  // SESSAO CANAL NO YOUTUBE
+  .youtube-preview {
+    margin-top: 30px;
+    padding: 80px 8%;
+    display: grid;
+    place-items: center;
+
+    .youtube-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background-color: #ff0000;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+
+      svg {
+        font-size: 1.4rem;
+      }
+
+      &:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 10px 25px rgba(255, 0, 0, 0.45);
+        background-color: #e60000;
+      }
+    }
+  }
+
   .img-port {
     border: 2px solid white;
     width: 360px;

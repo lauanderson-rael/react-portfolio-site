@@ -13,6 +13,9 @@ import { ContainerSkills } from "../../components/CardSkills/index";
 import { CardProject } from "../../components/CardProject";
 import { AcademicHistory } from "../../components/AcademicHistory/index.tsx";
 import { ProfessionalExperience } from "../../components/ProfessionalExperience/index.tsx";
+import { VideoGrid, VideoCardItem } from "../../components/VideoCard";
+import { videos } from "../Youtube/videos";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import Foto from "../../assets/perfil.png";
 import Foto2 from "../../assets/foto3.png";
@@ -265,6 +268,33 @@ export function Main() {
                   technologies={projeto.technologies}
                 />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEÇÃO CANAL NO YOUTUBE */}
+        <section className="youtube-preview" id="youtube">
+          <div className="interface">
+            <h2 className="titulo">
+              Meu Canal no <span>YouTube</span>
+            </h2>
+
+            <VideoGrid>
+              {videos.slice(0, 3).map((item) => (
+                <VideoCardItem key={item.id} video={item} />
+              ))}
+            </VideoGrid>
+
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "36px",
+              }}
+            >
+              <Link to="/youtube" className="youtube-link-btn">
+                <FaYoutube /> Ver mais vídeos
+              </Link> 
             </div>
           </div>
         </section>
