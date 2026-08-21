@@ -8,9 +8,9 @@ import {
   LoadingContainer,
   EmptyState,
   LegalNotice,
-  SessaoFormulario,
 } from "./styles";
 import { FiSearch, FiArrowUpRight } from "react-icons/fi";
+import { Contact } from "../../components/Contact";
 
 type Post = {
   id: string;
@@ -25,26 +25,6 @@ export default function Blog() {
   const [post, setPost] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    celular: "",
-    mensagem: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const { nome, email, celular, mensagem } = formData;
-    const subject = `Pergunta de ${nome}`;
-    const body = `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\nMensagem:\n${mensagem}`;
-    window.location.href = `mailto:lauanderson38@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-  };
-
-  const handleReset = () => {
-    setFormData({ nome: "", email: "", celular: "", mensagem: "" });
-  };
 
   const filteredPosts = post.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -172,54 +152,7 @@ export default function Blog() {
         </LegalNotice>
       </Container>
 
-      {/* FORMULÁRIO DE CONTATO */}
-      <SessaoFormulario>
-        <h2 className="titulo">
-          Faça sua <span>Pergunta</span>
-        </h2>
-
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Seu nome completo"
-            value={formData.nome}
-            onChange={(e) =>
-              setFormData({ ...formData, nome: e.target.value })
-            }
-            required
-          />
-          <input
-            type="email"
-            placeholder="Seu e-mail"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            required
-          />
-          <input
-            type="tel"
-            placeholder="Seu celular"
-            value={formData.celular}
-            onChange={(e) =>
-              setFormData({ ...formData, celular: e.target.value })
-            }
-          />
-          <textarea
-            placeholder="Sua mensagem"
-            value={formData.mensagem}
-            onChange={(e) =>
-              setFormData({ ...formData, mensagem: e.target.value })
-            }
-            required
-          ></textarea>
-
-          <div className="btn-enviar">
-            <input type="submit" value="ENVIAR" />
-            <input type="button" value="LIMPAR" onClick={handleReset} />
-          </div>
-        </form>
-      </SessaoFormulario>
+      <Contact />
     </>
   );
 }

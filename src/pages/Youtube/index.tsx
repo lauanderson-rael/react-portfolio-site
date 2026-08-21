@@ -1,6 +1,7 @@
 import { Container, YoutubeHero } from "./styles";
 import { VideoGrid, VideoCardItem } from "../../components/VideoCard";
 import { videos } from "./videos";
+import { Contact } from "../../components/Contact";
 import { FaYoutube } from "react-icons/fa";
 
 export default function Youtube() {
@@ -32,6 +33,8 @@ export default function Youtube() {
           <VideoCardItem key={item.id} video={item} />
         ))}
       </VideoGrid>
+
+      <Contact />
     </Container>
   );
 }
