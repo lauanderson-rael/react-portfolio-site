@@ -300,7 +300,7 @@ export const Container = styled.main`
   // SESSAO CANAL NO YOUTUBE
   .youtube-preview {
     margin-top: 30px;
-    padding: 80px 8%;
+    padding: 80px 2%;
     display: grid;
     place-items: center;
 
