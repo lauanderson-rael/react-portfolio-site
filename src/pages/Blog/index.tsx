@@ -150,9 +150,9 @@ export default function Blog() {
         <LegalNotice>
           As imagens e descrições exibidas neste blog são fornecidas por serviços de terceiros e pertencem aos respectivos autores. Ao clicar no botão "Ler mais", você será redirecionado para a publicação original. Todos os direitos reservados aos autores.
         </LegalNotice>
-      </Container>
 
-      <Contact />
+        <Contact />
+      </Container>
     </>
   );
 }

@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const SessaoFormulario = styled.section`
+  background-color: var(--background-color);
+  transition: var(--transition);
   padding: 80px 4%;
   margin-top: 40px;
 
